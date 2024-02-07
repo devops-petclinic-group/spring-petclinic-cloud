@@ -61,3 +61,19 @@ spec:
         resources: {}
       restartPolicy: Always
 status: {}
+
+---
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-visits
+ namespace: spring-petclinic
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: visits-service
+ minReplicas: 1
+ maxReplicas: 5
+ targetCPUUtilizationPercentage: 80
