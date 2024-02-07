@@ -42,9 +42,9 @@ spec:
           requests:
             cpu: 2000m
             memory: 1Gi
-        # env:
-        # - name: SPRING_PROFILES_ACTIVE
-        #   value: kubernetes
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: kubernetes
         # - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
         #   value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
         ports:
