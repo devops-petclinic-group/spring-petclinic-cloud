@@ -9,7 +9,7 @@ services:
      - 8888:8888
 
   discovery-server:
-    image: springcommunity/spring-petclinic-cloud-discovery-server
+    image: springcommunity/spring-petclinic-cloud-discovery-servervice
     container_name: discovery-server
     mem_limit: 512M
     depends_on:
